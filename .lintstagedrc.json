@@ -1,0 +1,4 @@
+{
+  "*.js": ["eslint --ignore-path .gitignore", "prettier --check"],
+  "*.(json|md|yml)": "prettier --check"
+}

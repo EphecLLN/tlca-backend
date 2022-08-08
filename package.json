@@ -1,0 +1,47 @@
+{
+  "name": "tlca-backend",
+  "version": "1.0.0",
+  "description": "Backend server of the TLCA platform",
+  "repository": "https://github.com/TLCA-project/tlca-backend.git",
+  "author": "Sébastien Combéfis <sebastien@combefis.be>",
+  "license": "AGPL-3.0-only",
+  "private": false,
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node index.js",
+    "test": "cross-env NODE_ENV=test mocha",
+    "watch": "cross-env NODE_ENV=development nodemon index.js -e js",
+    "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.5.0",
+    "apollo-server": "^3.10.0",
+    "check-password-strength": "^2.0.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "graphql": "^16.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "luxon": "^3.0.1",
+    "mongoose": "^6.4.4",
+    "path": "^0.12.7",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}

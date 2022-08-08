@@ -1,0 +1,2 @@
+MONGODB_URI=mongodb://db:27017/tlca-dev
+JWT_SECRET=MY_SECRET_STORY

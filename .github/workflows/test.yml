@@ -1,0 +1,34 @@
+name: Pull request
+on:
+  pull_request:
+    branches:
+      - develop
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+
+      - name: Set up node
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Create .env.test file
+        shell: bash
+        run: |
+          echo "MONGODB_URI=mongodb://localhost:27017/tlca-test" > .env.test
+          echo "JWT_SECRET=SUPER_SECRET_STORY" >> .env.test
+
+      - name: Run MongoDB
+        uses: DigiPie/mongo-action@v1.0.1
+        with:
+          image_version: latest
+          port: 27017
+
+      - name: Run tests
+        run: yarn test
