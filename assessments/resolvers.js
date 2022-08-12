@@ -24,6 +24,10 @@ const resolvers = {
         },
       ]).then((a) => a.competencies)
     },
+    // Retrieve the 'id' of the assessment from the MongoDB '_id'.
+    id(assessment, _args, _context, _info) {
+      return assessment._id.toString()
+    },
   },
   Query: {
     // Retrieve one given assessment given its 'id'.

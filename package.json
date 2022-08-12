@@ -1,6 +1,6 @@
 {
   "name": "tlca-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Backend server of the TLCA platform",
   "repository": "https://github.com/TLCA-project/tlca-backend.git",
   "author": "Sébastien Combéfis <sebastien@combefis.be>",

@@ -1,3 +1,9 @@
+## 1.0.1 (2022-08-12)
+
+### Bug Fixes
+
+- **assessments:** add resolver to correctly retrieve the 'id' of the assessment
+
 ## 1.0.0 (2022-08-08)
 
 ### Features
