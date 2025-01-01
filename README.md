@@ -12,7 +12,7 @@ Start by installing required dependencies:
 
 Then, clone the Git repository, and launch the installation:
 
-    > git clone https://github.com/TLCA-project/tlca-backend.git
+    > git clone https://github.com/EphecLLN/tlca-backend.git
     > cd tlca-backend
     > yarn install
 
